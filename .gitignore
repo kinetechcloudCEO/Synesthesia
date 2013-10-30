@@ -1,7 +1,7 @@
 .DS_Store
 .DS_Store?
 node_modules/
-public/bower_components
+bower_components
 lib-cov
 *.seed
 *.log
