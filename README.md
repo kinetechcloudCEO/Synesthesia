@@ -70,6 +70,7 @@ Output:
 
 Unit Testing:
   - Mocha
+  - Phantom
 
 ##Challenges:
 

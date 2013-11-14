@@ -22,20 +22,17 @@
 
 
     <!-- Testing Libraries -->
-    <script src="../node_modules/phantom/phantom.js"></script>
     <script src="../public/bower_components/mocha/mocha.js"></script>
     <script src="../node_modules/chai/chai.js"></script>
-    <script src="../node_modules/sinon/lib/sinon.js"></script>
     <script>
-        // Use the expect version of chai assertions - http://chaijs.com/api/bdd
-        var expect = chai.expect;
-
-        // Tell mocha we want TDD syntax
-        mocha.setup('tdd');
+            mocha.ui('bdd'); 
+            mocha.reporter('spec');
+            var expect = chai.expect;
     </script>
 
-    <!-- Source files -->
-    <!-- this initializes the namespace: -->
+    <!-- Backbone source files -->
+    
+    <!-- this initializes the namespace and can't move down: -->
     <script src="app-test.js"></script>
     <script src="../public/javascript/conductor/models/Conductor.js"></script>
     <script src="../public/javascript/conductor/models/Server.js"></script>
@@ -47,14 +44,14 @@
     <script src="../public/javascript/client/models/Server.js"></script>
     <script src="../public/javascript/client/views/ClientApp.js"></script>
 
-
-
-    <!-- Test (this initializes the models) -->
+    <!-- Test scripts -->
+    <!-- (this initializes the models and can't move up) -->
     <script src="conductor-test.js"></script>
     <script src="client-test.js"></script>
 
     <script>
-        mocha.run();
+        if (window.mochaPhantomJS) { mochaPhantomJS.run(); }
+        else { mocha.run(); }
     </script>
 
 </body>

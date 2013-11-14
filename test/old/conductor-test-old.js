@@ -1,17 +1,17 @@
 
-describe('Conductor Model', function() {
+suite('Conductor Model', function() {
 	var conductor = new ConductorSpace.Conductor();
 	
-	it('should exist', function() {
+	test('should exist', function() {
 		expect(ConductorSpace).to.be.ok;
 	    expect(conductor).to.be.ok;
 	});
 
-	it('should have an initialize method', function() {
+	test('should have an initialize method', function() {
 		expect(typeof conductor.initialize).to.equal('function');
 	});
 
-	it('should toggle strobe when called', function() {
+	test('should toggle strobe when called', function() {
 		conductor.initialize();
 		conductor.toggleStrobe();
 		expect(conductor.get('strobe')).to.equal(true);
@@ -26,11 +26,11 @@ var io = {
 	connect: function () {return {on: function() {}};}
 };
 
-describe('Conductor Server', function() {
-
+suite('Conductor Server', function() {
 	var server = new ConductorSpace.Server();
 
-	it('should emit a named event', function() {
+
+	test('should emit a named event', function() {
 		expect(typeof server.emit).to.equal('function');
 	});
 
@@ -72,7 +72,7 @@ describe('Conductor Server', function() {
 
 
 
-describe('Conductor Router', function() {
+suite('Conductor Router', function() {
 
 });
 
@@ -98,12 +98,12 @@ describe('Conductor Router', function() {
 
 //	//how to check if server is emitting an event
 //	//i could set up my own listener
-//	/	it('')
+//	//test('')
 
 //	//for toggleAudioLights i can mock up a DOM element
 //	//and watch it change property
 
-//	it('render()', function() {
+//	test('render()', function() {
 //    conductorApp.render();
 
 //    expect(this.profile.$el.html().match(/John/)).to.be.ok;
