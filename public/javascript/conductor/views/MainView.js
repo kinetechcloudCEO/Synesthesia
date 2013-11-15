@@ -1,12 +1,12 @@
 ConductorSpace.MainView = Backbone.View.extend({
 
   events: {
-    'click .color': 'sendColor',
-    'click .random': 'sendRandomColor',
+    'touchstart .color': 'sendColor',
+    'touchstart .random': 'sendRandomColor',
     'click #toggleSound': 'toggleSound',
-    'click #toggleMotion': 'toggleMotion',
-    'click #toggleStrobe': 'toggleStrobe',
-    'click #toggleAudioLights': 'toggleAudioLights',
+    'touchstart #toggleMotion': 'toggleMotion',
+    'touchstart #toggleStrobe': 'toggleStrobe',
+    'touchstart #toggleAudioLights': 'toggleAudioLights',
     'change #fader': 'updateFadeTime'
   },
 

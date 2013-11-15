@@ -9,6 +9,7 @@
     "mysql": "~2.0.0-alpha9",
     "mocha": "*",
     "chai": "*",
-    "mocha-phantomjs": "*"
+    "mocha-phantomjs": "*",
+    "browserify": "latest"
   }
 }
