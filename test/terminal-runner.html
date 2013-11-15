@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <!-- Title &amp; Meta -->
-    <title>Backbone Tests</title>
+    <title>KineTests</title>
     <meta charset="utf-8">
 
     <!-- Stylesheets -->
@@ -12,7 +12,6 @@
 <body>
 
     <div id="mocha"></div>
-
 
     <!-- Libs -->
     <script src="../public/bower_components/jquery/jquery.min.js"></script>
@@ -32,22 +31,9 @@
 
     <!-- Backbone source files -->
     
-    <!-- this initializes the namespace and can't move down: -->
-    <script src="app-test.js"></script>
-    <script src="../public/javascript/conductor/models/Conductor.js"></script>
-    <script src="../public/javascript/conductor/models/Server.js"></script>
-    <script src="../public/javascript/conductor/router/router.js"></script>
-    <script src="../public/javascript/conductor/views/ConductorApp.js"></script>
-    <script src="../public/javascript/conductor/views/MainView.js"></script>
-
-    <script src="../public/javascript/client/models/Client.js"></script>
-    <script src="../public/javascript/client/models/Server.js"></script>
-    <script src="../public/javascript/client/views/ClientApp.js"></script>
 
     <!-- Test scripts -->
-    <!-- (this initializes the models and can't move up) -->
-    <script src="conductor-test.js"></script>
-    <script src="client-test.js"></script>
+    <script src="terminal_tests/view-test.js"></script>
 
     <script>
         if (window.mochaPhantomJS) { mochaPhantomJS.run(); }

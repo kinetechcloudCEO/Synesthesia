@@ -13,14 +13,14 @@ suite('Client Model', function() {
 		
 	});
 
-	test('should have cast and show data', function() {
-		var shows = [];
-		var upcoming = client.get('upcoming');
-		for (var key in upcoming) {
-			shows.push(upcoming[key]);
-		}
-		expect(shows.length > 0).to.equal(true);
-	});
+	// test('should have cast and show data', function() {
+	// 	var shows = [];
+	// 	var upcoming = client.get('upcoming');
+	// 	for (var key in upcoming) {
+	// 		shows.push(upcoming[key]);
+	// 	}
+	// 	expect(shows.length > 0).to.equal(true);
+	// });
 
 });
 
